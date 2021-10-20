@@ -35,7 +35,7 @@ export default {
       &:before {
         content: 'Total Hits';
         padding-bottom: 20px;
-        font-size: $base-font-size;
+        font-size: $small-font-size;
         color: $light-violet;
       }
     }
@@ -44,7 +44,7 @@ export default {
       &:before {
         content: 'Button Clicks';
         padding-bottom: 20px;
-        font-size: $base-font-size;
+        font-size: $small-font-size;
         color: $light-violet;
       }
     }
