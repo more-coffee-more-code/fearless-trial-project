@@ -25,3 +25,15 @@ npm run build
 ```
 npm run lint
 ```
+
+## Future updates to this project
+### After analyzing the application and receiving feedback from users, I will be adding a lifecycle method `beforeMount` to ping the API and populate the `Total Hits` indicator before the first button click. Having a prepopulated indicator makes more sense from a UX perspective. Here is the code snippet I would add:
+```
+beforeMount() {
+  this.getDataFromApi()
+}
+```
+
+### Another change I would make is to add a global count variable. As of now the parent component holds the `count` data property and updates it's children with the new value. However, it might be cleaner for the parent and children components to read from a global store.
+
+
