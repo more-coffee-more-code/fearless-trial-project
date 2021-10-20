@@ -1,0 +1,14 @@
+version: '4.5.13'
+
+services:
+
+  my-app:
+    container_name: fearless-trial-project
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '3000'
