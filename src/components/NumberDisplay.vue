@@ -1,8 +1,8 @@
 <template>
   <div class="display">
     <div class="display__wrapper">
-      <p class="number-display" v-if="displayCount === true">{{ currentCount }}</p>
-      <p class="number-display" v-if="displayHits === true">{{ displayHits }}</p>
+      <p class="display__number display__number--count" v-if="displayCount === true">{{ currentCount }}</p>
+      <p class="display__number display__number--hits" v-else-if="displayHits === true">{{ totalHits }}</p>
     </div>
   </div>
 </template>
@@ -21,13 +21,31 @@ export default {
 }
 </script>
 <style lang="scss">
-.display {
-  &__wrapper {
+@import '../assets/global-styles';
 
-  }
+.display {
 
   &__number {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    font-size: $large-font-size;
+    
+    &--hits {
+      &:before {
+        content: 'Total Hits';
+        padding-bottom: 20px;
+        font-size: $base-font-size;
+      }
+    }
 
+    &--count {
+      &:before {
+        content: 'Button Clicks';
+        padding-bottom: 20px;
+        font-size: $base-font-size;
+      }
+    }
   }
 }
 </style>
