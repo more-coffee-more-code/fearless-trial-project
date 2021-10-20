@@ -5,7 +5,7 @@
         <number-display class="counter-interface__display" />
         <number-display class="counter-interface__display" />
       </div>
-      <counter-button class="counter-interface___button"/>
+      <counter-button class="counter-interface___button" @clicked="incrementCounter"/>
     </div>
   </div>
 </template>
@@ -18,6 +18,16 @@ export default {
   components: {
     NumberDisplay,
     CounterButton
+  },
+  data() {
+    return {
+      count: 0
+    }
+  },
+  methods: {
+    incrementCount(value) {
+      return this.count += value
+    }
   }
 }
 </script>
