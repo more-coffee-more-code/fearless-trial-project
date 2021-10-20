@@ -15,5 +15,7 @@ export default {
   border-radius: 4px;
   background-color: $dark-violet;
   color: $white;
+  max-width: 300px;
+  margin: 0 auto;
 }
 </style>
