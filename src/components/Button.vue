@@ -22,5 +22,13 @@ export default {
   color: $white;
   max-width: 300px;
   margin: 0 auto;
+  transition: .8s all;
+  font-size: 22px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $white;
+    color: $dark-violet;
+  }
 }
 </style>
