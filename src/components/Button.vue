@@ -15,7 +15,7 @@ export default {
 @import '../assets/global-styles';
 
 .button {
-  padding: 10px 20px;
+  padding: 15px 35px;
   border: solid 1px $white;
   border-radius: 4px;
   background-color: $dark-violet;
@@ -24,6 +24,7 @@ export default {
   margin: 0 auto;
   transition: .8s all;
   font-size: $base-font-size;
+  font-weight: bold;
 
   &:hover {
     cursor: pointer;
