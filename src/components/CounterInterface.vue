@@ -2,10 +2,10 @@
   <div class="counter-interface">
     <div class="counter-interface__content">
       <div class="counter-interface__displays">
-        <number-display class="counter-interface__display" />
-        <number-display class="counter-interface__display" />
+        <number-display class="counter-interface__display" :currentCount="this.count" :displayCount="true"/>
+        <number-display class="counter-interface__display" :totalHits="this.hits" :displayHits="true"/>
       </div>
-      <counter-button class="counter-interface___button" @clicked="incrementCounter"/>
+      <counter-button class="counter-interface___button" @clicked="incrementCount"/>
     </div>
   </div>
 </template>
@@ -21,12 +21,24 @@ export default {
   },
   data() {
     return {
-      count: 0
+      count: 0,
+      hits: 0
+    }
+  },
+  watch: {
+    count() {
+      console.log('count changed')
+      this.getDataFromApi()
     }
   },
   methods: {
     incrementCount(value) {
       return this.count += value
+    },
+    getDataFromApi() {
+      fetch("https://api.countapi.xyz/hit/localhost/visits")
+      .then(response => response.json())
+      .then(data => this.hits = data.value);
     }
   }
 }
