@@ -1,9 +1,14 @@
 <template>
-  <button class="button" type="submit">Increase Count</button>
+  <button class="button" type="submit" @click="triggerCounterOnParent">Increase Count</button>
 </template>
 <script>
 export default {
-  name: 'Button'
+  name: 'Button',
+  methods: {
+    triggerCounterOnParent() {
+      this.$emit('clicked', 1)
+    }
+  },
 }
 </script>
 <style lang="scss">
