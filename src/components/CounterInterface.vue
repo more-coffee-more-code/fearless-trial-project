@@ -27,7 +27,6 @@ export default {
   },
   watch: {
     count() {
-      console.log('count changed')
       this.getDataFromApi()
     }
   },
