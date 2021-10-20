@@ -41,6 +41,8 @@ beforeMount() {
 #### Another change I would make is to add a global count variable. As of now the parent component holds the `count` data property and updates its children with the new value. However, it might be cleaner for the parent and children components to read from a global store.
 
 
+
+
 ## Enjoy the Purple Cow Project!
 
 
