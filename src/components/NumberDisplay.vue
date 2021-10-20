@@ -26,7 +26,7 @@ export default {
 .display {
 
   &__number {
-    color: $white;
+    color: $red-orange;
     display: flex;
     flex-direction: column;
     font-size: $large-font-size;
@@ -36,6 +36,7 @@ export default {
         content: 'Total Hits';
         padding-bottom: 20px;
         font-size: $base-font-size;
+        color: $light-violet;
       }
     }
 
@@ -44,6 +45,7 @@ export default {
         content: 'Button Clicks';
         padding-bottom: 20px;
         font-size: $base-font-size;
+        color: $light-violet;
       }
     }
   }

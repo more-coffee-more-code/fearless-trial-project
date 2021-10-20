@@ -48,8 +48,16 @@ export default {
 .counter-interface {
   background-color: $dark-violet;
   border: solid 1px $light-violet;
-  width: max-content;
+  border-radius: 4px;
+  width: 400px;
   margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s;
+
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);   
+  }
 
   &__content {
     display: flex;

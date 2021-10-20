@@ -23,7 +23,7 @@ export default {
   max-width: 300px;
   margin: 0 auto;
   transition: .8s all;
-  font-size: 22px;
+  font-size: $base-font-size;
 
   &:hover {
     cursor: pointer;
