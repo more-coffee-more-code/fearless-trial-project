@@ -27,7 +27,7 @@ npm run lint
 ```
 
 ## Future updates to this project
-### After analyzing the application and receiving feedback from users, I will be adding a lifecycle method `beforeMount` to ping the API and populate the `Total Hits` indicator before the first button click. Having a prepopulated indicator makes more sense from a UX perspective. Here is the code snippet I would add:
+#### After analyzing the application and receiving feedback from users, I will be adding a lifecycle method `beforeMount` to ping the API and populate the `Total Hits` indicator before the first button click. Having a prepopulated indicator makes more sense from a UX perspective. Here is the code snippet I would add:
 ```
 beforeMount() {
   this.getDataFromApi()
